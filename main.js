@@ -59,4 +59,3 @@ function upload() {
   reader.readAsArrayBuffer(photo.files[0]); // Read Provided File
 }
 document.getElementById("photo").addEventListener('input', upload);
-
