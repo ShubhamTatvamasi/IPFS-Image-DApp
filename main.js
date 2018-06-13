@@ -55,7 +55,7 @@ function upload() {
       newBackground(result[0].hash)
     })
   }
-  const photo = document.getElementById("photo");
-  reader.readAsArrayBuffer(photo.files[0]); // Read Provided File
+  const photo = document.getElementById("photo")
+  reader.readAsArrayBuffer(photo.files[0]) // Read Provided File
 }
-document.getElementById("photo").addEventListener('input', upload);
+document.getElementById("photo").addEventListener('input', upload)
