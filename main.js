@@ -41,7 +41,7 @@ function newBackground(hash) {
 
 function upload() {
   const reader = new FileReader();
-  reader.onloadend = function() {
+  reader.onloadend = () => {
     const ipfs = window.IpfsApi({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // Connect to IPFS
     const buf = ethereumjs.Buffer.Buffer(reader.result) // Convert data into buffer
     ipfs.files.add(buf, (err, result) => { // Upload buffer to IPFS
