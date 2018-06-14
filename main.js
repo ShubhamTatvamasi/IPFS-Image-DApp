@@ -8,13 +8,13 @@ const PublicKey = '0xbe862AD9AbFe6f22BCb087716c7D89a26051f74C'
 const PrivateKey = 'e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109'
 var Nonce = 0
 
+IPFSContract.ipfsHash((error, result) => {
+    document.body.background = `https://ipfs.infura.io/ipfs/${result}`
+})
+
 // for getting the nonce from blockchain
 web3.eth.getTransactionCount(PublicKey, (error, result) => {
   Nonce = result
-})
-
-IPFSContract.ipfsHash((error, result) => {
-    document.body.background = `https://ipfs.infura.io/ipfs/${result}`
 })
 
 function newBackground(hash) {
