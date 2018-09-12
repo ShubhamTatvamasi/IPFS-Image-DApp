@@ -4,8 +4,8 @@ web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io"))
 // IPFS Contract Interface
 const IPFSContract = web3.eth.contract(IPFSABI).at(IPFSAddress)
 
-const PublicKey = '0xbe862AD9AbFe6f22BCb087716c7D89a26051f74C'
-const PrivateKey = 'e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109'
+const PublicKey = '0x12345da127d2ab88e92c3bc3ab78fd3ffe30da5b'
+const PrivateKey = '0f12bbe9fa77aad882b973b433e64d44691f1c3ca826bd8a9223e485ad45bdd3'
 var Nonce = 0
 
 IPFSContract.ipfsHash((error, result) => {
